@@ -1,0 +1,7 @@
+{% form_theme form _self %}
+
+{% block content %}
+
+    {{ form(form, { 'attr': { 'novalidate': 'novalidate' }}) }}
+
+{% endblock %}

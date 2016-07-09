@@ -1,0 +1,84 @@
+services:
+    endroid_form.admin.form_admin:
+        class: Endroid\Bundle\FormBundle\Admin\FormAdmin
+        arguments: [ null, Endroid\Bundle\FormBundle\Entity\Form, EndroidFormBundle:FormAdmin ]
+        calls:
+            - [ setContainer, [ '@service_container' ] ]
+            - [ addChild, [ '@endroid_form.admin.field_admin' ] ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: form.admin.group.label, label: form.admin.form.list.label, label_catalogue: messages }
+
+    endroid_form.admin.field_admin:
+        class: Endroid\Bundle\FormBundle\Admin\FieldAdmin
+        arguments: [ null, Endroid\Bundle\FormBundle\Entity\Field, null ]
+        calls:
+            - [ setContainer, [ '@service_container' ] ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: form.admin.group.label, label: form.admin.field.list.label, label_catalogue: messages, show_in_dashboard: false }
+
+    endroid_form.admin.choice_admin:
+        class: Endroid\Bundle\FormBundle\Admin\ChoiceAdmin
+        arguments: [ null, Endroid\Bundle\FormBundle\Entity\Choice, null ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: form.admin.group.label, label: form.admin.choice.list.label, label_catalogue: messages, show_in_dashboard: false }
+
+    endroid_form.builder.form_builder:
+        class: Endroid\Bundle\FormBundle\Builder\FormBuilder
+        calls:
+            - [ setFormFactory, [ '@form.factory' ] ]
+
+    endroid_form.event_listener.field_discriminator_map_listener:
+        class: Endroid\Bundle\FormBundle\EventListener\FieldDiscriminatorMapListener
+        arguments: [ '@endroid_form.registry.field_registry' ]
+        tags:
+            - { name: doctrine.event_listener, event: loadClassMetadata }
+
+    endroid_form.event_listener.send_confirmation_message_listener:
+        class: Endroid\Bundle\FormBundle\EventListener\SendConfirmationMessageListener
+        arguments: [ '@templating', '@mailer', '@swiftmailer.transport.real' ]
+        tags:
+            - { name: kernel.event_subscriber }
+
+    endroid_form.event_listener.store_result_listener:
+        class: Endroid\Bundle\FormBundle\EventListener\StoreResultListener
+        arguments: [ '@doctrine.orm.entity_manager' ]
+        tags:
+            - { name: kernel.event_subscriber }
+
+    endroid_form.field.check:
+        class: Endroid\Bundle\FormBundle\Entity\CheckField
+        tags:
+            - { name: endroid_form.field }
+
+    endroid_form.field.choice:
+        class: Endroid\Bundle\FormBundle\Entity\ChoiceField
+        tags:
+            - { name: endroid_form.field }
+
+    endroid_form.field.date:
+        class: Endroid\Bundle\FormBundle\Entity\DateField
+        tags:
+            - { name: endroid_form.field }
+
+    endroid_form.field.email:
+        class: Endroid\Bundle\FormBundle\Entity\EmailField
+        tags:
+            - { name: endroid_form.field }
+
+    endroid_form.field.number:
+        class: Endroid\Bundle\FormBundle\Entity\NumberField
+        tags:
+            - { name: endroid_form.field }
+
+    endroid_form.field.text:
+        class: Endroid\Bundle\FormBundle\Entity\TextField
+        tags:
+            - { name: endroid_form.field }
+
+    endroid_form.field.textarea:
+        class: Endroid\Bundle\FormBundle\Entity\TextAreaField
+        tags:
+            - { name: endroid_form.field }
+
+    endroid_form.registry.field_registry:
+        class: Endroid\Bundle\FormBundle\Registry\FieldRegistry

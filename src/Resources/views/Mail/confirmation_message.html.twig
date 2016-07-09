@@ -1,0 +1,13 @@
+<p>{{ content }}</p>
+
+<table>
+
+    {% for entry in entries %}
+
+        <tr>
+            <td>{{ entry.field.title }}</td><td>&nbsp;:&nbsp;</td><td>{{ entry.value }}</td>
+        </tr>
+
+    {% endfor %}
+
+</table>

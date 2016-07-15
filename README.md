@@ -5,8 +5,8 @@ Form Bundle
 
 [![Latest Stable Version](http://img.shields.io/packagist/v/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
 [![Build Status](http://img.shields.io/travis/endroid/EndroidFormBundle.svg)](http://travis-ci.org/endroid/EndroidFormBundle)
-[![Latest Stable Version](https://poser.pugx.org/endroid/form-bundle/v/stable.png)](https://packagist.org/packages/endroid/form-bundle)
 [![Total Downloads](http://img.shields.io/packagist/dt/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
+[![Monthly Downloads](http://img.shields.io/packagist/dm/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
 [![License](http://img.shields.io/packagist/l/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
 
 The Endroid FormBundle enables users to create basic forms through the Sonata
@@ -110,9 +110,9 @@ acme.field.my_field:
 
 ## Versioning
 
-Version numbers follow the MAJOR.MINOR.PATCH scheme. Backwards compatible
-changes will be kept to a minimum but be aware that these can occur. Lock
-your dependencies for production and test your code when upgrading.
+Version numbers follow the MAJOR.MINOR.PATCH scheme. Backwards compatibility
+breaking changes will be kept to a minimum but be aware that these can occur.
+Lock your dependencies for production and test your code when upgrading.
 
 ## License
 

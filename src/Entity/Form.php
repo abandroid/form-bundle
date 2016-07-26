@@ -238,7 +238,7 @@ class Form
      */
     public function getFields()
     {
-        return $this->fields;
+        return $this->fields->toArray();
     }
 
     /**
@@ -559,7 +559,7 @@ class Form
      */
     public function getResults()
     {
-        return $this->results;
+        return $this->results->toArray();
     }
 
     /**
@@ -574,6 +574,7 @@ class Form
         foreach ($this->getFields() as $field) {
             $field->build($formBuilder);
         }
+
         $formBuilder->add('submit', SubmitType::class);
 
         return $this;

@@ -150,7 +150,7 @@ class ChoiceField extends Field
      */
     public function getChoices()
     {
-        return $this->choices;
+        return $this->choices->toArray();
     }
 
     /**

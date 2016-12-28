@@ -41,9 +41,9 @@ class Choice
     protected $position;
 
     /**
-     * @var Field
+     * @var ChoiceField
      *
-     * @ORM\ManyToOne(targetEntity="Field", inversedBy="choices")
+     * @ORM\ManyToOne(targetEntity="ChoiceField", inversedBy="choices")
      */
     protected $field;
 

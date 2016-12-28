@@ -17,6 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class FormController extends Controller
 {
@@ -25,7 +26,7 @@ class FormController extends Controller
      *
      * @param Form $form
      *
-     * @return array
+     * @return array|Response
      */
     public function showAction(Form $form)
     {
@@ -41,7 +42,7 @@ class FormController extends Controller
         $symfonyForm = $this->getFormBuilder()->createForm($form);
         $symfonyForm->handleRequest($request);
 
-        if ($symfonyForm->isValid()) {
+        if ($symfonyForm->isSubmitted() && $symfonyForm->isValid()) {
             $result = $form->createResult($symfonyForm->getData());
             $this->getEventDispatcher()->dispatch(FormSuccessEvent::NAME, new FormSuccessEvent($result));
             if ($form->getSuccessAction() == Form::SUCCESS_ACTION_REDIRECT) {

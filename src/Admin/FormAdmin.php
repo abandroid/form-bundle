@@ -9,16 +9,15 @@
 
 namespace Endroid\Bundle\FormBundle\Admin;
 
-use AdminBundle\Admin\BaseAdmin;
 use Endroid\Bundle\FormBundle\Entity\Form;
 use Knp\Menu\ItemInterface as MenuItemInterface;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Admin\AdminInterface;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Route\RouteCollection;
-use Symfony\Component\HttpFoundation\Request;
 
-class FormAdmin extends BaseAdmin
+class FormAdmin extends AbstractAdmin
 {
     /**
      * {@inheritdoc}

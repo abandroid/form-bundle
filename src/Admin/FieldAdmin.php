@@ -9,11 +9,11 @@
 
 namespace Endroid\Bundle\FormBundle\Admin;
 
-use AdminBundle\Admin\BaseAdmin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class FieldAdmin extends BaseAdmin
+class FieldAdmin extends AbstractAdmin
 {
     /**
      * {@inheritdoc}

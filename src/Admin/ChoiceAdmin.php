@@ -9,10 +9,10 @@
 
 namespace Endroid\Bundle\FormBundle\Admin;
 
-use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class ChoiceAdmin extends Admin
+class ChoiceAdmin extends AbstractAdmin
 {
     /**
      * {@inheritdoc}

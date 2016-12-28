@@ -3,7 +3,6 @@ services:
         class: Endroid\Bundle\FormBundle\Admin\FormAdmin
         arguments: [ null, Endroid\Bundle\FormBundle\Entity\Form, EndroidFormBundle:FormAdmin ]
         calls:
-            - [ setContainer, [ '@service_container' ] ]
             - [ addChild, [ '@endroid_form.admin.field_admin' ] ]
         tags:
             - { name: sonata.admin, manager_type: orm, group: form.admin.group.label, label: form.admin.form.list.label, label_catalogue: messages }
@@ -11,8 +10,6 @@ services:
     endroid_form.admin.field_admin:
         class: Endroid\Bundle\FormBundle\Admin\FieldAdmin
         arguments: [ null, Endroid\Bundle\FormBundle\Entity\Field, null ]
-        calls:
-            - [ setContainer, [ '@service_container' ] ]
         tags:
             - { name: sonata.admin, manager_type: orm, group: form.admin.group.label, label: form.admin.field.list.label, label_catalogue: messages, show_in_dashboard: false }
 

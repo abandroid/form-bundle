@@ -34,9 +34,9 @@ class FormController extends Controller
         $request = $this->get('request_stack')->getMasterRequest();
 
         if ($request->query->get('success')) {
-            return $this->render('EndroidFormBundle:Form:success.html.twig', array(
+            return $this->render('EndroidFormBundle:Form:success.html.twig', [
                 'successMessage' => $form->getSuccessMessage(),
-            ));
+            ]);
         }
 
         $symfonyForm = $this->getFormBuilder()->createForm($form);
@@ -48,15 +48,15 @@ class FormController extends Controller
             if ($form->getSuccessAction() == Form::SUCCESS_ACTION_REDIRECT) {
                 $redirectUrl = $form->getSuccessUrl();
             } else {
-                $redirectUrl = $this->generateUrl($request->get('_route'), array_merge($request->get('_route_params'), array('success' => true)));
+                $redirectUrl = $this->generateUrl($request->get('_route'), array_merge($request->get('_route_params'), ['success' => true]));
             }
             $redirectResponse = new RedirectResponse($redirectUrl);
             $redirectResponse->send();
         }
 
-        return array(
+        return [
             'form' => $symfonyForm->createView(),
-        );
+        ];
     }
 
     /**

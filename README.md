@@ -36,10 +36,10 @@ Then enable the bundle via the kernel.
 
 public function registerBundles()
 {
-    $bundles = array(
+    $bundles = [
         // ...
         new Endroid\Bundle\FormBundle\EndroidFormBundle(),
-    );
+    ];
 }
 ```
 
@@ -70,7 +70,7 @@ own listener or by overriding any of the existing.
  */
 public static function getSubscribedEvents()
 {
-    return array(FormSuccessEvent::NAME => 'myHandler');
+    return [FormSuccessEvent::NAME => 'myHandler'];
 }
 
 /**
@@ -83,7 +83,7 @@ public function myHandler(FormSuccessEvent $event)
     $result = $event->getResult();
     $form = $result->getForm();
 
-    ...
+    //...
 }
 ```
 

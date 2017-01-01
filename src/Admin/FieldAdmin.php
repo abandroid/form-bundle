@@ -18,10 +18,10 @@ class FieldAdmin extends AbstractAdmin
     /**
      * {@inheritdoc}
      */
-    protected $datagridValues = array(
+    protected $datagridValues = [
         '_sort_by' => 'position',
         '_sort_order' => 'ASC',
-    );
+    ];
 
     /**
      * {@inheritdoc}
@@ -72,7 +72,7 @@ class FieldAdmin extends AbstractAdmin
     {
         $listMapper
             ->addIdentifier('title')
-            ->add('required', 'boolean', array('editable' => true))
+            ->add('required', 'boolean', ['editable' => true])
         ;
     }
 }

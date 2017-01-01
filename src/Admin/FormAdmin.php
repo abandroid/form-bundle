@@ -27,13 +27,13 @@ class FormAdmin extends AbstractAdmin
         $formMapper
             ->with('General')
                 ->add('title')
-                ->add('successAction', 'sonata_type_translatable_choice', array(
+                ->add('successAction', 'sonata_type_translatable_choice', [
                     'required' => true,
-                    'choices' => array(
+                    'choices' => [
                         'Redirect to URL' => Form::SUCCESS_ACTION_REDIRECT,
                         'Show message' => Form::SUCCESS_ACTION_MESSAGE,
-                    ),
-                ))
+                    ],
+                ])
                 ->add('successUrl')
                 ->add('successMessage')
             ->end()
@@ -80,7 +80,7 @@ class FormAdmin extends AbstractAdmin
     {
         $listMapper
             ->addIdentifier('title')
-            ->add('results', 'string', array('label' => 'form.admin.form.list.results', 'template' => 'EndroidFormBundle:Admin:results.html.twig'))
+            ->add('results', 'string', ['label' => 'form.admin.form.list.results', 'template' => 'EndroidFormBundle:Admin:results.html.twig'])
         ;
     }
 
@@ -104,7 +104,7 @@ class FormAdmin extends AbstractAdmin
 
         $menu->addChild(
             'form.admin.field.list.label',
-            array('uri' => $this->getChild('endroid_form.admin.field_admin')->generateUrl('list', array('id' => $this->getSubject()->getId())))
+            ['uri' => $this->getChild('endroid_form.admin.field_admin')->generateUrl('list', ['id' => $this->getSubject()->getId()])]
         );
     }
 }

@@ -35,7 +35,7 @@ class StoreResultListener implements EventSubscriberInterface
      */
     public static function getSubscribedEvents()
     {
-        return array(FormSuccessEvent::NAME => 'storeResult');
+        return [FormSuccessEvent::NAME => 'storeResult'];
     }
 
     /**

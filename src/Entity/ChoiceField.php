@@ -165,16 +165,15 @@ class ChoiceField extends Field
                 ->add('expanded')
                 ->add('multiple')
                 ->add('choices', 'sonata_type_collection',
-                    array(
+                    [
                         'label' => 'form.admin.choice.list.label',
                         'required' => false,
                         'by_reference' => false,
-                    ),
-                    array(
+                    ], [
                         'edit' => 'inline',
                         'inline' => 'table',
                         'sortable' => 'position',
-                    )
+                    ]
                 )
             ->end()
         ;
@@ -189,7 +188,7 @@ class ChoiceField extends Field
     {
         $options = parent::getOptions();
 
-        $choices = array();
+        $choices = [];
         foreach ($this->getChoices() as $choice) {
             $choices[$choice->getLabel()] = $choice->getLabel();
         }

@@ -53,7 +53,7 @@ class SendConfirmationMessageListener implements EventSubscriberInterface
      */
     public static function getSubscribedEvents()
     {
-        return array(FormSuccessEvent::NAME => 'sendConfirmationMail');
+        return [FormSuccessEvent::NAME => 'sendConfirmationMail'];
     }
 
     /**
@@ -73,15 +73,15 @@ class SendConfirmationMessageListener implements EventSubscriberInterface
         $message = Swift_Message::newInstance();
         $message
             ->setSubject($form->getMailSubject())
-            ->setTo(array($form->getMailRecipientEmail() => $form->getMailRecipientName()))
-            ->setBody($this->twigEngine->render('EndroidFormBundle:Mail:confirmation_message.html.twig', array(
+            ->setTo([$form->getMailRecipientEmail() => $form->getMailRecipientName()])
+            ->setBody($this->twigEngine->render('EndroidFormBundle:Mail:confirmation_message.html.twig', [
                 'content' => $form->getMailBody(),
                 'entries' => $result->getEntries(),
-            )), 'text/html')
+            ]), 'text/html')
         ;
 
         if ($form->getMailSenderName() != null && $form->getMailSenderEmail() != null) {
-            $message->setFrom(array($form->getMailSenderEmail() => $form->getMailSenderName()));
+            $message->setFrom([$form->getMailSenderEmail() => $form->getMailSenderName()]);
         }
 
         $this->swiftMailer->send($message);

@@ -25,12 +25,12 @@ class RegisterFieldsPass implements CompilerPassInterface
 
         $fieldRegistryDefinition = $container->getDefinition('endroid_form.registry.field_registry');
 
-        $fields = array();
+        $fields = [];
         foreach ($container->findTaggedServiceIds('endroid_form.field') as $id => $tag) {
             $fields[substr($id, strrpos($id, '.') + 1)] = $container->getDefinition($id)->getClass();
         }
 
-        $fieldRegistryDefinition->setArguments(array($fields));
+        $fieldRegistryDefinition->setArguments([$fields]);
 
         if (!$container->hasDefinition('endroid_form.admin.field_admin')) {
             return;

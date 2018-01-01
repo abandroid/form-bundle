@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\Entity;
+namespace Endroid\FormBundle\Entity;
 
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;

@@ -7,9 +7,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\EventListener;
+namespace Endroid\FormBundle\EventListener;
 
-use Endroid\Bundle\FormBundle\Event\FormSuccessEvent;
+use Endroid\FormBundle\Event\FormSuccessEvent;
 use Swift_Mailer;
 use Swift_MemorySpool;
 use Swift_Message;

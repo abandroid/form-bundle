@@ -7,11 +7,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\Controller;
+namespace Endroid\FormBundle\Controller;
 
-use Endroid\Bundle\FormBundle\Builder\FormBuilder;
-use Endroid\Bundle\FormBundle\Entity\Form;
-use Endroid\Bundle\FormBundle\Event\FormSuccessEvent;
+use Endroid\FormBundle\Builder\FormBuilder;
+use Endroid\FormBundle\Entity\Form;
+use Endroid\FormBundle\Event\FormSuccessEvent;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\EventDispatcher\EventDispatcher;

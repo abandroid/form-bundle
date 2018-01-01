@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\Entity;
+namespace Endroid\FormBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -164,12 +164,15 @@ class ChoiceField extends Field
             ->with('General')
                 ->add('expanded')
                 ->add('multiple')
-                ->add('choices', 'sonata_type_collection',
+                ->add(
+                    'choices',
+                    'sonata_type_collection',
                     [
                         'label' => 'form.admin.choice.list.label',
                         'required' => false,
                         'by_reference' => false,
-                    ], [
+                    ],
+                    [
                         'edit' => 'inline',
                         'inline' => 'table',
                         'sortable' => 'position',

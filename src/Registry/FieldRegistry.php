@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\Registry;
+namespace Endroid\FormBundle\Registry;
 
 class FieldRegistry
 {

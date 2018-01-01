@@ -7,10 +7,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\EventListener;
+namespace Endroid\FormBundle\EventListener;
 
 use Doctrine\ORM\EntityManager;
-use Endroid\Bundle\FormBundle\Event\FormSuccessEvent;
+use Endroid\FormBundle\Event\FormSuccessEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class StoreResultListener implements EventSubscriberInterface

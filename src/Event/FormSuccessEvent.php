@@ -7,9 +7,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\Event;
+namespace Endroid\FormBundle\Event;
 
-use Endroid\Bundle\FormBundle\Entity\Result;
+use Endroid\FormBundle\Entity\Result;
 use Symfony\Component\EventDispatcher\Event;
 
 class FormSuccessEvent extends Event

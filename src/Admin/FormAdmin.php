@@ -7,9 +7,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\Admin;
+namespace Endroid\FormBundle\Admin;
 
-use Endroid\Bundle\FormBundle\Entity\Form;
+use Endroid\FormBundle\Entity\Form;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Admin\AdminInterface;

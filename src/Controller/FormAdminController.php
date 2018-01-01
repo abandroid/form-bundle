@@ -7,9 +7,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\Controller;
+namespace Endroid\FormBundle\Controller;
 
-use Endroid\Bundle\FormBundle\Entity\Form;
+use Endroid\FormBundle\Entity\Form;
 use PHPExcel;
 use PHPExcel_Exception;
 use PHPExcel_Writer_Excel2007;

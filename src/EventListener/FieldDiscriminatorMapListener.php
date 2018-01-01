@@ -7,11 +7,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\EventListener;
+namespace Endroid\FormBundle\EventListener;
 
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Mapping\ClassMetadata;
-use Endroid\Bundle\FormBundle\Registry\FieldRegistry;
+use Endroid\FormBundle\Registry\FieldRegistry;
 
 class FieldDiscriminatorMapListener
 {
@@ -40,7 +40,7 @@ class FieldDiscriminatorMapListener
         /** @var ClassMetaData $classMetadata */
         $classMetadata = $args->getClassMetadata();
 
-        if ($classMetadata->getName() != 'Endroid\Bundle\FormBundle\Entity\Field') {
+        if ($classMetadata->getName() != 'Endroid\FormBundle\Entity\Field') {
             return;
         }
 

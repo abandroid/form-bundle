@@ -1,10 +1,9 @@
-Form Bundle
-==============
+# Form Bundle
 
-*By [endroid](http://endroid.nl/)*
+*By [endroid](https://endroid.nl/)*
 
 [![Latest Stable Version](http://img.shields.io/packagist/v/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
-[![Build Status](http://img.shields.io/travis/endroid/EndroidFormBundle.svg)](http://travis-ci.org/endroid/EndroidFormBundle)
+[![Build Status](http://img.shields.io/travis/endroid/form-bundle.svg)](http://travis-ci.org/endroid/form-bundle)
 [![Total Downloads](http://img.shields.io/packagist/dt/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
 [![Monthly Downloads](http://img.shields.io/packagist/dm/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
 [![License](http://img.shields.io/packagist/l/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
@@ -14,7 +13,7 @@ Admin Bundle. It includes form configuration, storage of results, sending of
 notifications when a form is filled in and even the possibility to export form
 results.
 
-[![knpbundles.com](http://knpbundles.com/endroid/EndroidFormBundle/badge-short)](http://knpbundles.com/endroid/EndroidFormBundle)
+[![knpbundles.com](http://knpbundles.com/endroid/form-bundle/badge-short)](http://knpbundles.com/endroid/form-bundle)
 
 ## Requirements
 
@@ -38,7 +37,7 @@ public function registerBundles()
 {
     $bundles = [
         // ...
-        new Endroid\Bundle\FormBundle\EndroidFormBundle(),
+        new Endroid\FormBundle\EndroidFormBundle(),
     ];
 }
 ```

@@ -7,9 +7,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle;
+namespace Endroid\FormBundle;
 
-use Endroid\Bundle\FormBundle\DependencyInjection\Compiler\RegisterFieldsPass;
+use Endroid\FormBundle\DependencyInjection\Compiler\RegisterFieldsPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

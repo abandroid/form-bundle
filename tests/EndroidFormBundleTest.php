@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle;
+namespace Endroid\FormBundle;
 
 use PHPUnit_Framework_TestCase;
 

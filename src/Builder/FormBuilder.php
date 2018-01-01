@@ -7,10 +7,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\FormBundle\Builder;
+namespace Endroid\FormBundle\Builder;
 
-use Endroid\Bundle\FormBundle\Entity\Form;
-use Endroid\Bundle\FormBundle\Form\Type\FormType;
+use Endroid\FormBundle\Entity\Form;
+use Endroid\FormBundle\Form\Type\FormType;
 use Symfony\Component\Form\Form as SymfonyForm;
 use Symfony\Component\Form\FormFactoryInterface;
 

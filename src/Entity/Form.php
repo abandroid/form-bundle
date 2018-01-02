@@ -603,9 +603,6 @@ class Form
         return $result;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function __toString()
     {
         return (string) $this->title;

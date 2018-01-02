@@ -80,7 +80,7 @@ class SendConfirmationMessageListener implements EventSubscriberInterface
             ]), 'text/html')
         ;
 
-        if ($form->getMailSenderName() != null && $form->getMailSenderEmail() != null) {
+        if (null != $form->getMailSenderName() && null != $form->getMailSenderEmail()) {
             $message->setFrom([$form->getMailSenderEmail() => $form->getMailSenderName()]);
         }
 

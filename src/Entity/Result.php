@@ -156,9 +156,6 @@ class Result
         return $this->entries->toArray();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function __toString()
     {
         return strval($this->id);

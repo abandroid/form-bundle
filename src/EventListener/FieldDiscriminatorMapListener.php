@@ -40,7 +40,7 @@ class FieldDiscriminatorMapListener
         /** @var ClassMetaData $classMetadata */
         $classMetadata = $args->getClassMetadata();
 
-        if ($classMetadata->getName() != 'Endroid\FormBundle\Entity\Field') {
+        if ('Endroid\FormBundle\Entity\Field' != $classMetadata->getName()) {
             return;
         }
 

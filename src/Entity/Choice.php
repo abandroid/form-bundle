@@ -143,9 +143,6 @@ class Choice
         return $this->field;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function __toString()
     {
         return (string) $this->label;

@@ -138,9 +138,6 @@ class ResultEntry
         return $this->result;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function __toString()
     {
         return strval($this->value);

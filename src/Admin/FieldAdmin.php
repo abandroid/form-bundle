@@ -45,7 +45,7 @@ class FieldAdmin extends AbstractAdmin
         ;
 
         $adminAttributes = $formMapper->getFormBuilder()->getAttribute('sonata_admin');
-        $editInline = isset($adminAttributes['edit']) && $adminAttributes['edit'] == 'inline';
+        $editInline = isset($adminAttributes['edit']) && 'inline' == $adminAttributes['edit'];
 
         if ($editInline) {
             $formMapper->add('position');

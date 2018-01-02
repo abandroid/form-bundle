@@ -45,7 +45,7 @@ class FormController extends Controller
         if ($symfonyForm->isSubmitted() && $symfonyForm->isValid()) {
             $result = $form->createResult($symfonyForm->getData());
             $this->getEventDispatcher()->dispatch(FormSuccessEvent::NAME, new FormSuccessEvent($result));
-            if ($form->getSuccessAction() == Form::SUCCESS_ACTION_REDIRECT) {
+            if (Form::SUCCESS_ACTION_REDIRECT == $form->getSuccessAction()) {
                 $redirectUrl = $form->getSuccessUrl();
             } else {
                 $redirectUrl = $this->generateUrl($request->get('_route'), array_merge($request->get('_route_params'), ['success' => true]));

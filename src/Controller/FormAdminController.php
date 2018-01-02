@@ -34,7 +34,7 @@ class FormAdminController extends CRUDController
 
         $rowNumber = 1;
         foreach ($form->getResults() as $result) {
-            if ($rowNumber == 1) {
+            if (1 == $rowNumber) {
                 $ord = ord('A');
                 foreach ($result->getEntries() as $entry) {
                     $excel->getActiveSheet()->setCellValue(chr($ord).$rowNumber, $entry->getField()->getTitle());

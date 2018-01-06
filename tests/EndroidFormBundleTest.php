@@ -9,9 +9,9 @@
 
 namespace Endroid\FormBundle;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class EndroidFormBundleTest extends PHPUnit_Framework_TestCase
+class EndroidFormBundleTest extends TestCase
 {
     public function testNoTestsYet()
     {

@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=7.1",
-        "endroid/installer": "^1.0",
+        "endroid/installer": "^1.0.3",
         "sonata-project/admin-bundle": "^3.2"
     },
     "require-dev": {

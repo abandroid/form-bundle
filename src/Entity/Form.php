@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) Jeroen van den Enden <info@endroid.nl>
  *
@@ -587,7 +589,7 @@ class Form
      *
      * @return Result
      */
-    public function createResult(array $data = array())
+    public function createResult(array $data = [])
     {
         $result = new Result();
         $result->setForm($this);

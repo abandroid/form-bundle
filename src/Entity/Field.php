@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) Jeroen van den Enden <info@endroid.nl>
  *
@@ -244,11 +246,11 @@ abstract class Field
      */
     public function getOptions()
     {
-        $options = array(
+        $options = [
             'label' => $this->title,
             'required' => $this->required,
-            'constraints' => $this->required ? array(new NotBlank()) : array(),
-        );
+            'constraints' => $this->required ? [new NotBlank()] : [],
+        ];
 
         if ($this->getDefault()) {
             $options['data'] = $this->getDefault();

@@ -3,7 +3,7 @@
 *By [endroid](https://endroid.nl/)*
 
 [![Latest Stable Version](http://img.shields.io/packagist/v/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
-[![Build Status](http://img.shields.io/travis/endroid/form-bundle.svg)](http://travis-ci.org/endroid/form-bundle)
+[![Build Status](https://github.com/endroid/form-bundle/workflows/CI/badge.svg)](https://github.com/endroid/form-bundle/actions)
 [![Total Downloads](http://img.shields.io/packagist/dt/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
 [![Monthly Downloads](http://img.shields.io/packagist/dm/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
 [![License](http://img.shields.io/packagist/l/endroid/form-bundle.svg)](https://packagist.org/packages/endroid/form-bundle)
